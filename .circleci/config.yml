@@ -14,11 +14,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: guni1192.work
-          command: ssh-keyscan -H guni1192.work >> ~/.ssh/known_hosts
+          name: add {{ DEPLOY_HOST }} to .ssh/known_hosts
+          command: ssh-keyscan -H {{ DEPLOY_HOST }} >> ~/.ssh/known_hosts
       - add_ssh_keys:
           fingerprints:
-            - "21:0f:28:90:a2:29:fd:93:86:64:3a:ad:80:b2:7a:22"
+            - {{ FINGERPRINTS }}
       - run: sudo apt install -y rsync
         # specify any bash command here prefixed with `run: `
         # - run: go get -v -t -d ./...

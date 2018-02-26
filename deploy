@@ -1,8 +1,3 @@
 #!/bin/sh
-USER=guni
-HOST=guni1192.work
-DIR=hugo-example   # might sometimes be empty!
-
-hugo && rsync -avz --delete public/ ${USER}@${HOST}:/var/www/${DIR}
-
+hugo && rsync -avz --delete public/ ${DEPLOY_PATH}@${DEPLOY_HOST}:/var/www/${DEPLOY_PATH}
 exit 0
