@@ -19,7 +19,8 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "21:0f:28:90:a2:29:fd:93:86:64:3a:ad:80:b2:7a:22"
-      - run: sudo apt install -y rsync
+      - run: sudo apt install -y rsync git
       - run: go get -v github.com/gohugoio/hugo
+      - run: git submodule update -i
       - deploy:
           command: ./deploy
