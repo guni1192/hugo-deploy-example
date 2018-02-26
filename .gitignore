@@ -5,4 +5,8 @@
 hugo.exe
 /public/
 
+### General ###
+
+.env
+
 # End of https://www.gitignore.io/api/hugo
