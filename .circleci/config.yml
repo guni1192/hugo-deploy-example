@@ -20,7 +20,7 @@ jobs:
     steps:
       - checkout
       - run: sudo apt install -y rsync
-      - add_ssh_keys
+      - add_ssh_keys:
         fingerprints:
             - "21:0f:28:90:a2:29:fd:93:86:64:3a:ad:80:b2:7a:22"
       # specify any bash command here prefixed with `run: `
