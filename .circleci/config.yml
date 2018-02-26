@@ -18,7 +18,7 @@ jobs:
           command: ssh-keyscan -H {{ DEPLOY_HOST }} >> ~/.ssh/known_hosts
       - add_ssh_keys:
           fingerprints:
-            - {{ FINGERPRINTS }}
+            - {{ fingerprints }}
       - run: sudo apt install -y rsync
         # specify any bash command here prefixed with `run: `
         # - run: go get -v -t -d ./...
