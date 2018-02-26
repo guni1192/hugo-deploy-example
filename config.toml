@@ -1,0 +1,4 @@
+baseURL = "http://example.org/"
+languageCode = "js"
+theme = "hugo-future-imperfect"
+title = "My New Hugo Site"
